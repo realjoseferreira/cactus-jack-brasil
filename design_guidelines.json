@@ -1,0 +1,101 @@
+{
+  "theme": "dark",
+  "archetype": "5 (Luxury / Editorial Fashion / Hype Streetwear)",
+  "typography": {
+    "primary": "Cabinet Grotesk",
+    "secondary": "Outfit",
+    "rules": {
+      "headings": "Uppercase, tight tracking (tracking-tighter), thick weights (font-black or font-extrabold).",
+      "body": "Regular to medium weights, leading-relaxed for descriptions, tracking-wide for uppercase subheadings.",
+      "badges": "Tiny (text-[10px] to text-xs), uppercase, font-bold, tracking-[0.2em]."
+    }
+  },
+  "colors": {
+    "background": {
+      "main": "#0C0A09",
+      "surface": "#171513",
+      "surface_elevated": "#221F1C",
+      "glass": "rgba(12, 10, 9, 0.7)"
+    },
+    "text": {
+      "primary": "#F5F5F0",
+      "secondary": "#A39E93",
+      "muted": "#7A7365",
+      "inverse": "#0C0A09"
+    },
+    "brand": {
+      "accent": "#8C2222",
+      "sand": "#D2C4A7",
+      "olive": "#3E4231",
+      "brown": "#4A3B2C"
+    }
+  },
+  "spacing_and_layout": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "section_gap": "py-24 lg:py-32",
+    "grid_product": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8",
+    "bento_features": "grid-cols-1 md:grid-cols-12 gap-4 lg:gap-6",
+    "hero": "h-[100svh] min-h-[600px] flex items-center justify-center relative overflow-hidden"
+  },
+  "components": {
+    "product_card": {
+      "style": "Dark luxury styling. No harsh white borders. Use subtle border-white/5. Background is surface (#171513).",
+      "interaction": "3D tilt on hover (using framer-motion useSpring/useMotionValue), image scales up slightly (scale-105).",
+      "badges": "Absolute positioned over the image. Example: bg-brand-accent text-white px-2 py-1 uppercase text-[10px] tracking-widest."
+    },
+    "hero": {
+      "style": "Cinematic. Video background (travis.mp4) covering 100% w/h. Overlay bg-black/60 to bg-black/80 gradient.",
+      "content": "Massive headline in Cabinet Grotesk, centered or bottom-left aligned. CTA button uses brand-sand background with black text."
+    },
+    "buttons": {
+      "primary": "bg-[#D2C4A7] text-[#0C0A09] hover:bg-white transition-colors duration-300 font-bold tracking-wide uppercase px-8 py-4 rounded-none",
+      "secondary": "bg-transparent border border-[#7A7365] text-[#F5F5F0] hover:border-[#D2C4A7] hover:text-[#D2C4A7] transition-all px-8 py-4 rounded-none uppercase font-bold tracking-wide",
+      "accent": "bg-[#8C2222] text-white hover:bg-red-800 transition-colors uppercase font-bold px-8 py-4 rounded-none"
+    },
+    "header": {
+      "style": "Fixed, top-0, w-full, z-50. Glassmorphism: backdrop-blur-xl bg-[#0C0A09]/70 border-b border-white/5. Minimalist layout.",
+      "links": "Hover state: text-[#D2C4A7] transition-colors. Desktop visible."
+    },
+    "cart_drawer": {
+      "style": "Slide-in from right. bg-[#171513] border-l border-white/5. Contains order summary, items list with quantity edit, fake shipping calc."
+    }
+  },
+  "motion": {
+    "page_load": "Fade in, slide up staggered (y: 20, opacity: 0 -> 1, duration: 0.8s, ease: [0.16, 1, 0.3, 1]).",
+    "scroll": "Parallax on large images and backgrounds.",
+    "hover": "High-end 3D tilt on cards. Micro-interactions on buttons (scale down slightly on tap: scale-95)."
+  },
+  "media": {
+    "video": {
+      "hero_bg": "/travis.mp4"
+    },
+    "images": {
+      "fachada": "/fachada.png",
+      "logo": "Cactus Jack Logo",
+      "travis_icons": "Travis Icon PNGs",
+      "sneaker_placeholders": [
+        "https://images.pexels.com/photos/9986259/pexels-photo-9986259.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.unsplash.com/photo-1610000750285-4779c03eac27?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHw0fHxwcmVtaXVtJTIwc25lYWtlciUyMHN0dWRpbyUyMHBob3RvZ3JhcGh5JTIwZGFyayUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzgxOTk0OTQ0fDA&ixlib=rb-4.1.0&q=85",
+        "https://images.pexels.com/photos/18155789/pexels-photo-18155789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.unsplash.com/photo-1623788975845-7d3e0adbae7c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwyfHxwcmVtaXVtJTIwc25lYWtlciUyMHN0dWRpbyUyMHBob3RvZ3JhcGh5JTIwZGFyayUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzgxOTk0OTQ0fDA&ixlib=rb-4.1.0&q=85"
+      ]
+    }
+  },
+  "accessibility": {
+    "contrast": "Ensure off-white text (#F5F5F0) against dark backgrounds (#0C0A09, #171513) meets minimum 4.5:1 ratio.",
+    "testing_attributes": "Add data-testid='...' to all buttons, links, inputs, and interactive cards.",
+    "focus": "Use focus:ring-2 focus:ring-[#D2C4A7] focus:outline-none for keyboard navigation."
+  },
+  "instructions_to_main_agent": [
+    "Install required dependencies: framer-motion, lucide-react (or @phosphor-icons/react), tailwind-merge, clsx.",
+    "Implement a custom 3D Tilt Card component using framer-motion for the sneaker products.",
+    "Build a cinematic hero section using the provided travis.mp4 as background with a dark overlay.",
+    "The e-commerce must simulate a cart using LocalStorage or React Context.",
+    "Include a 'Checkout Demo' flow with forms for personal data, address, and payment, ending in a success page.",
+    "Language is explicitly Portuguese (BRL/R$).",
+    "Do NOT use standard rounded corners. Use rounded-none or very small rounded-sm to keep the brutalist/luxury aesthetic.",
+    "Add decorative sections using the provided fachada.png for the physical store and floating travis icon PNGs.",
+    "Create a Sorteio/Giveaway section for purchases above R$ 50.000.",
+    "Footer must contain 'Developed by José Ferreira / Sick Code' linking to sickcode.com.br."
+  ]
+}
