@@ -127,5 +127,5 @@ This is an unofficial concept store created for portfolio and design demonstrati
 
 ## Credits
 
-Developed by José Ferreira / Sick Code  
-https://www.sickcode.com.br
+Developed by José Ferreira
+
